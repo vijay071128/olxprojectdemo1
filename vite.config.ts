@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: process.env.NODE_ENV === 'production' ? '/' : '/', // Change '/' to '/your-repo-name/' if deploying to a subdirectory
+  base: process.env.NODE_ENV === 'production' ? '/olxproject/' : '/', // Change to your GitHub repo name
   server: {
     host: "::",
     port: 8080,
