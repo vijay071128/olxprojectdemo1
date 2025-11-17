@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Real Estate Marketplace Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 35% 15%;
+
+    /* OLX-inspired Professional Blue */
+    --primary: 220 85% 25%;
+    --primary-light: 220 85% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Vibrant Orange Accent */
+    --accent: 25 95% 53%;
+    --accent-light: 25 95% 63%;
+    --accent-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 35% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 220 85% 25%;
+
+    /* Custom Design Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(220, 85%, 25%) 0%, hsl(270, 80%, 35%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
+    --property-shadow: 0 4px 20px -2px hsl(220, 85%, 25%, 0.1);
+    --property-shadow-hover: 0 10px 40px -4px hsl(220, 85%, 25%, 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 35% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 35% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 35% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 220 85% 35%;
+    --primary-light: 220 85% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --accent: 25 95% 53%;
+    --accent-light: 25 95% 63%;
+    --accent-foreground: 0 0% 98%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 220 85% 35%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(220, 85%, 35%) 0%, hsl(270, 80%, 45%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(222, 35%, 9%) 0%, hsl(217, 33%, 15%) 100%);
+    --property-shadow: 0 4px 20px -2px hsl(0, 0%, 0%, 0.25);
+    --property-shadow-hover: 0 10px 40px -4px hsl(220, 85%, 35%, 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .property-card {
+    @apply transition-all duration-300 ease-smooth hover:shadow-property-hover hover:-translate-y-2;
+  }
+
+  .hero-button {
+    @apply bg-accent hover:bg-accent-light text-accent-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 ease-bounce hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .category-card {
+    @apply bg-card-gradient border border-border rounded-xl p-6 shadow-property hover:shadow-property-hover transition-all duration-300 ease-smooth hover:-translate-y-1 cursor-pointer;
+  }
+
+  .search-input {
+    @apply bg-background border-2 border-border focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg px-4 py-3 transition-all duration-200;
+  }
+
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .line-clamp-1 {
+    @apply overflow-hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

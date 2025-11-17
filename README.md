@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# RealtyHub - Premium Real Estate Marketplace
 
-## Project info
+A modern real estate platform built with React, TypeScript, and Tailwind CSS. Find your perfect property from our collection of houses, apartments, villas, and land for sale or rent.
 
-**URL**: https://lovable.dev/projects/3c71a379-a7ee-4182-9c85-17a40707b693
+## Features
 
-## How can I edit this code?
+- 🏠 Browse properties by category (Houses, Apartments, Villas, Land)
+- 🛒 Buy, Rent, and Sell listings
+- ❤️ Save favorite properties
+- 🔍 Advanced search functionality
+- 📱 Responsive design
+- 🔐 User authentication
+- 📝 Property management (add, edit, delete)
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication**: JWT
+- **Deployment**: GitHub Pages
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c71a379-a7ee-4182-9c85-17a40707b693) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+1. Clone the repository
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the backend server
+```bash
+cd backend
+npm install
+npm start
+```
+
+4. Start the frontend development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/         # Page components
+│   ├── contexts/      # React contexts
+│   ├── hooks/         # Custom hooks
+│   ├── lib/           # Utility functions
+│   └── data/          # Static data and types
+├── backend/           # Express.js backend
+└── public/            # Static assets
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Available Scripts
 
-## What technologies are used for this project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-This project is built with:
+## Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/3c71a379-a7ee-4182-9c85-17a40707b693) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License.
