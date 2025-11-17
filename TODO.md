@@ -1,0 +1,3 @@
+- [x] Modify backend/server.js to listen on '0.0.0.0' for network access
+- [x] Update frontend dev script to expose on network
+- [x] Test running the application and accessing from 192.168.29.30
