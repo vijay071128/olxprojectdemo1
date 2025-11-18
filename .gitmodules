@@ -1,3 +1,6 @@
 [submodule "olxFrontend"]
 	path = olxFrontend
 	url = https://github.com/vijay071128/olxFrontend.git
+[submodule "olxBackend"]
+	path = olxBackend
+	url = https://github.com/vijay071128/olx--Backend.git
