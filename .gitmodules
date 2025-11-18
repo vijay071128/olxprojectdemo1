@@ -1,0 +1,3 @@
+[submodule "olxFrontend"]
+	path = olxFrontend
+	url = https://github.com/vijay071128/olxFrontend.git
